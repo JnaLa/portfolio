@@ -1,0 +1,23 @@
+[
+  {
+    "id": "concurrent-programming",
+    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/concurrent.jpg",
+    "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/Concurrent%20programming",
+    "title": "Concurrent Programming",
+    "description": "The course covered the basics of concurrent programming concepts and methods. Covered topics are modern threading API, synchronization, mutexes, dead locks, race conditions and best practices in concurrent and parallel programming."
+  },
+  {
+    "id": "graphics-programming",
+    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/graphics.jpg",
+    "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/graphics-programming",
+    "title": "Graphics Programming",
+    "description": "The course covered modern graphics programming with OpenGL. The course covers topics such as OpenGL Shading Language (GLSL) and the modern OpenGL programming pipeline."
+  },
+  {
+    "id": "functional-programming",
+    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/functional.jpg",
+    "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/Functional%20programming",
+    "title": "Functional Programming",
+    "description": "The course covered an introduction to functional programming using a purely functional programming language (Elixir). The course also covers various programming language related concepts and terminologies e.g. mutability and state."
+  }
+]
