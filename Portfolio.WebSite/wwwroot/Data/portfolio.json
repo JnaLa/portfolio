@@ -1,7 +1,7 @@
 [
   {
     "id": "concurrent-programming",
-    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/concurrent.jpg",
+    "img": "https://raw.githubusercontent.com/JnaLa/portfolio/main/Portfolio.WebSite/wwwroot/Data/img/concurrent.jpg",
     "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/Concurrent%20programming",
     "title": "Concurrent Programming",
     "description": "The course covered the basics of concurrent programming concepts and methods. Covered topics are modern threading API, synchronization, mutexes, dead locks, race conditions and best practices in concurrent and parallel programming."
