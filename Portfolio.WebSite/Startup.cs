@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Portfolio.WebSite.Models;
 using Portfolio.WebSite.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Portfolio.WebSite
@@ -25,7 +28,10 @@ namespace Portfolio.WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddTransient<JsonFilePortfolioService>();
+            services.AddServerSideBlazor();
+            services.AddControllers();
+            services.AddTransient<JsonFileExperienceService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +50,7 @@ namespace Portfolio.WebSite
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            
             app.UseRouting();
 
             app.UseAuthorization();
@@ -52,6 +58,14 @@ namespace Portfolio.WebSite
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapBlazorHub();
+                //endpoints.MapGet("/experiences", (context) =>
+                //{
+                //    var experiences = app.ApplicationServices.GetService<JsonFilePortfolioService>().GetExperiences();
+                //    var json = JsonSerializer.Serialize<IEnumerable<Experience>>(experiences);
+                //    return context.Response.WriteAsync(json);
+                //});
             });
         }
     }

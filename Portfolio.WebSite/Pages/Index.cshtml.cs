@@ -13,12 +13,12 @@ namespace Portfolio.WebSite.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public JsonFilePortfolioService PortfolioService;
+        public JsonFileExperienceService PortfolioService;
         public IEnumerable<Experience> Experiences { get; private set; }
 
         public IndexModel(
             ILogger<IndexModel> logger,
-            JsonFilePortfolioService portfolioService)
+            JsonFileExperienceService portfolioService)
         {
             _logger = logger;
             PortfolioService = portfolioService;
@@ -26,7 +26,7 @@ namespace Portfolio.WebSite.Pages
 
         public void OnGet()
         {
-            Experiences = PortfolioService.GetExperience();
+            Experiences = PortfolioService.GetExperiences();
         }
     }
 }

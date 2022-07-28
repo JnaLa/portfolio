@@ -1,0 +1,100 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Portfolio.WebSite.Models;
+@using Portfolio.WebSite.Services;
+@inject JsonFileExperienceService ExperienceService
+
+<div class="card-columns">
+    @foreach (var experience in ExperienceService.GetExperiences())
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@experience.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@experience.Title</h5>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+                <button @onclick="(e => SelectExperience(experience.Id))"
+                        data-toggle="modal" data-target="#experienceModal" class="btn btn-primary">
+                    More Info
+                </button>
+            </small>
+        </div>
+    }
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+@if (selectedExperience != null)
+{
+    <div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="experienceTitle">@selectedExperience.Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('@selectedExperience.Image');">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">@selectedExperience.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h5>Course Grade</h5>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        var currentGrade = i;
+                        if (i < grades)
+                        {
+                            <span class="fa-star fa checked"></span>
+
+                        }
+                        else
+                        {
+                            <span class="fa-star fa"></span>
+                        }
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@code {
+    Experience selectedExperience;
+    string selectedExperienceId;
+
+    void SelectExperience(string experienceId)
+    {
+        selectedExperienceId = experienceId;
+        selectedExperience = ExperienceService.GetExperiences().First(x => x.Id == experienceId);
+        GetCurrentGrading();
+
+    }
+
+    int grades = 0;
+
+
+    void GetCurrentGrading()
+    {
+        grades = selectedExperience.Grade;
+    }
+
+    
+
+
+
+
+
+
+}

@@ -1,23 +1,50 @@
 [
   {
-    "id": "concurrent-programming",
-    "img": "https://raw.githubusercontent.com/JnaLa/portfolio/main/Portfolio.WebSite/wwwroot/Data/img/concurrent.jpg",
+    "Id": "concurrent-programming",
+    "img": "https://github.com/JnaLa/portfolio/blob/main/Portfolio.WebSite/wwwroot/Data/img/concurrent.jpg?raw=true",
     "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/Concurrent%20programming",
-    "title": "Concurrent Programming",
-    "description": "The course covered the basics of concurrent programming concepts and methods. Covered topics are modern threading API, synchronization, mutexes, dead locks, race conditions and best practices in concurrent and parallel programming."
+    "Title": "Concurrent Programming",
+    "Description": "The course covered the basics of concurrent programming concepts and methods. Covered topics are modern threading API, synchronization, mutexes, dead locks, race conditions and best practices in concurrent and parallel programming.",
+    "Grade": 4
   },
   {
-    "id": "graphics-programming",
-    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/graphics.jpg",
+    "Id": "graphics-programming",
+    "img": "https://github.com/JnaLa/portfolio/blob/main/Portfolio.WebSite/wwwroot/Data/img/graphics.jpg?raw=true",
     "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/graphics-programming",
-    "title": "Graphics Programming",
-    "description": "The course covered modern graphics programming with OpenGL. The course covers topics such as OpenGL Shading Language (GLSL) and the modern OpenGL programming pipeline."
+    "Title": "Graphics Programming",
+    "Description": "The course covered modern graphics programming with OpenGL. The course covers topics such as OpenGL Shading Language (GLSL) and the modern OpenGL programming pipeline.",
+    "Grade": 2
   },
   {
-    "id": "functional-programming",
-    "img": "https://student.labranet.jamk.fi/~n3409/img_portfolio/img/functional.jpg",
+    "Id": "functional-programming",
+    "img": "https://github.com/JnaLa/portfolio/blob/main/Portfolio.WebSite/wwwroot/Data/img/functional.jpg?raw=true",
     "url": "https://gitlab.labranet.jamk.fi/N3409/advanced-programming/-/tree/master/Functional%20programming",
-    "title": "Functional Programming",
-    "description": "The course covered an introduction to functional programming using a purely functional programming language (Elixir). The course also covers various programming language related concepts and terminologies e.g. mutability and state."
+    "Title": "Functional Programming",
+    "Description": "The course covered an introduction to functional programming using a purely functional programming language (Elixir). The course also covers various programming language related concepts and terminologies e.g. mutability and state.",
+    "Grade": 3
+  },
+  {
+    "Id": "advanced-databases",
+    "img": "",
+    "url": "",
+    "Title": "Advanced Databases",
+    "Description": "Course contents included the design process from conceptual and needs analysis through normalisation and logical design to the physical design of a database by using a CASE (Computer Aided Software Engineering) tool for data modelling and object-relational mapping. The structure and operation of database management systems, the duties of a database administrator (DBA); installation, administration and management of databases. Current trends in databases (big data, cloud-based databases, NoSQL etc.)",
+    "Grade": 3
+  },
+  {
+    "Id": "service-oriented-applications",
+    "img": "",
+    "url": "",
+    "Title": "Service Oriented Applications",
+    "Description": "The course contained basics of the architecture, design and implementation of service-based applications. In addition, the course introduces Web services, REST architecture and cloud services. The course assignment introduces the students to the design and implementation of a service-based application utilizing applicable application frameworks and libraries.",
+    "Grade": 3
+  },
+  {
+    "Id": "ohjelmoinnin-perusteet",
+    "img": "",
+    "url": "",
+    "Title": "Ohjelmoinnin Perusteet",
+    "Description": "Course covered the basics of Git-version control system, variables, methods, functions, data structures, strings, arrays, exception handling and file managing. ",
+    "Grade": 5
   }
 ]
